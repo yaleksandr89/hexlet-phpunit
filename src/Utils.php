@@ -1,9 +1,11 @@
 <?php
 
-namespace Hexlet\Phpunit\Utils;
+declare(strict_types=1);
+
+namespace Php\Package\Utils;
 
 // Эта функция переворачивает переданную строку
-function reverseString($string)
+function reverseString(string $string): string
 {
     return implode(array_reverse(str_split($string)));
 }
@@ -13,7 +15,6 @@ function without(array $coll, array $values = []): array
     if (empty($values)) {
         return $coll;
     }
-    // array_diff сравнивает значения и возвращает только те, что есть в первом, но нет во втором
-    // array_values возвращает новый индексированный массив (чтобы индексы были с 0)
+
     return array_values(array_diff($coll, $values));
 }

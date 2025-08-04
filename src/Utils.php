@@ -18,3 +18,8 @@ function without(array $coll, array $values = []): array
 
     return array_values(array_diff($coll, $values));
 }
+
+function gt(int $value, int $other): bool
+{
+    return $value > $other;
+}
